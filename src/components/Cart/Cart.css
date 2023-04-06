@@ -4,3 +4,10 @@
     position: sticky;
     top: 0;
 }
+.btn-clear{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(197, 40, 40);
+}
