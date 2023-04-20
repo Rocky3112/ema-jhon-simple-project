@@ -62,6 +62,7 @@ const Shop = () => {
 
     return (
         <div className='shop-container'>
+           
             <div className="products-container">
                 {
                     products.map(product => <Product
@@ -78,7 +79,7 @@ const Shop = () => {
                 
                 >
                     <Link to="/orders">
-                    <button>Review Order</button>
+                    <button className='mt-3'>Review Order</button>
                 </Link>
                 </Cart>
             </div>

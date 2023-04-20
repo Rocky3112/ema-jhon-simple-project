@@ -33,14 +33,14 @@ const Orders = () => {
                 }
                 
             </div>
-            <div className='cart-container'>
+            <div className='cart-container '>
                 <Cart 
                 cart={cart}
                 handleClearCart={handleClearCart}
                 
                 >
                     <Link to="/checkout">
-                        <button>Procced Checkout</button>
+                        <button className='mt-3'>Procced Checkout</button>
                     </Link>
                 </Cart>
             </div>
