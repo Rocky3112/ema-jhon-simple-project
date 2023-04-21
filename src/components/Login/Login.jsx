@@ -4,6 +4,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
     const [error, setError]= useState('')
+    const [show, setShow] =useState(false)
     const navigate = useNavigate();
     const location = useLocation()
     console.log(location);
@@ -61,7 +62,10 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" name='password' className="input input-bordered" required/>
+          <input type="password" placeholder="password" name='password' className="input input-bordered" required/>
+          <p onClick={()=>setShow(!show)}><small>
+            {show ? <span>Hide Password</span>:<span>Show Password</span>}
+            </small></p>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
