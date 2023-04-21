@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-    // const [error, setError]= useState('')
- const {signIn} = useContext(AuthContext);
+    const [error, setError]= useState('')
+ const {user, signIn} = useContext(AuthContext);
 
     const handleSignIn =(event)=>{
         event.preventDefault();
@@ -13,7 +13,11 @@ const Login = () => {
         const password =form.password.value;
 
         console.log(email, password);
-
+         
+        // if(!user){
+        //     setError('User Not Found');
+        //     return;
+        // }
         
 
         signIn(email, password)
@@ -21,10 +25,12 @@ const Login = () => {
             const loggedUser =result.user;
             console.log(loggedUser);
             form.reset();
+            setError('')
             
         })
         .catch( error => {
             console.log(error);
+            setError(error.message)
             
         })
 
@@ -57,6 +63,7 @@ const Login = () => {
           <input type="submit" value="Login"  className="btn btn-primary" />
         </div>
         <p><small>New to Ema-john? <Link to="/signup">Create an account</Link></small></p>
+        <p className=' text-red-500'>{error}</p>
       </div>
       </form>
     </div>
