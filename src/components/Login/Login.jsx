@@ -62,7 +62,7 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name='password' className="input input-bordered" required/>
+          <input type={show ? "text":"password"} placeholder="password" name='password' className="input input-bordered" required/>
           <p onClick={()=>setShow(!show)}><small>
             {show ? <span>Hide Password</span>:<span>Show Password</span>}
             </small></p>

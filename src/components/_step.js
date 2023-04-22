@@ -21,4 +21,16 @@
  * firebase login
  * firebase init
  * 
+ * 1 proceed
+ * 2 hosting : firebase(up & down Arrow) use space bar to select
+ * 3 existing project
+ * 4 select the project carefully
+ * 5 which project as public derectory : dist
+ * 6 silgle page application : yes
+ * 7 continous deploy :no
+ * 
+ * -----for every time deploy
+ * 1 npm run build
+ * 2 firebase deploy...
+ * 
  * */  
